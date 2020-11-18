@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chương trình kiểm tra số nguyên tố</title>
+    </head>
+<body>
+<label>Mời nhập vào số lượng SNT
+    <input type="text" id="number">
+</label>
+<button onclick="displayNumber()">Check</button>
+<script>
+    /*check*/
+    function checkPrime(n) {
+        if (n <2) return false;
+        for (let i = 2; i <= (Math.sqrt(n)) ; i++) {
+            if (n% i == 0) return false;
+        }
+        return true;
+    }
+    /*print*/
+    function displayNumber() {
+        let primeAmount = parseInt(document.getElementById('number').value);
+        let count=0;
+        let i=2;
+        while(count<primeAmount)
+        {
+            if(checkPrime(i)==true)
+            {
+                count+=1;//tăng count 1 đơn vị rồi check tiếp
+                console.log(i);
+            }
+            i+=1;//tăng i đơn vị rồi chạy tiếpn
+        }
+    }
+</script>
+</body>
+</html>
+</head>
+<body>
+
+</body>
+</html>
